@@ -31,7 +31,9 @@ def main():
         choices=sorted(set(LEVEL1) | set(ALPHA20_FEATURES)),
         help="Use an explicit Level1/Alpha20 subset instead of --base",
     )
-    parser.add_argument("--feature-mask", type=float, default=0)
+    parser.add_argument(
+        "--feature-mask", type=float, default=AppConfig().agent.available_feature_mask_pct
+    )
     parser.add_argument("--inner-start", default="2022-05-01")
     parser.add_argument("--inner-end", default="2025-12-31")
     parser.add_argument("--outer-start", default="2026-01-01")

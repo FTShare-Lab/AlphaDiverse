@@ -104,7 +104,7 @@ python -m alphadiverse \
   --output results/hs300_run
 ```
 
-**Defaults: HS300 · Level1 · 1 fold · 20 rounds.** Omit `--membership-data` if the panel already contains complete point-in-time daily membership flags. `bash run.sh` is equivalent to `python -m alphadiverse`; use a new output directory for each run.
+**Defaults: HS300 · Level1 · 1 fold · 20 rounds · feature mask 70%.** Omit `--membership-data` if the panel already contains complete point-in-time daily membership flags. `bash run.sh` is equivalent to `python -m alphadiverse`; use a new output directory for each run.
 
 <details>
 <summary><strong>Markets, date ranges, and research settings</strong></summary>
@@ -115,7 +115,7 @@ python -m alphadiverse \
 | `--base` | `level1` | `level1`, `alpha20` |
 | `--folds` | `1` | Set to `n` for n-fold research |
 | `--rounds` | `20` | Number of research rounds |
-| `--feature-mask` | `0` | Percentage of optional research features to mask; core inputs remain available |
+| `--feature-mask` | `70` | Percentage of optional research features to mask; core inputs remain available |
 | `--threads` | `4` | Local compute threads |
 | `--inner-start` / `--inner-end` | `2022-05-01` / `2025-12-31` | Inner research interval |
 | `--outer-start` / `--outer-end` | `2026-01-01` / `2026-08-31` | Final held-out evaluation interval |

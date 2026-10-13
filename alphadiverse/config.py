@@ -48,7 +48,7 @@ class EvaluationConfig:
 
 @dataclass(frozen=True)
 class AgentConfig:
-    available_feature_mask_pct: float = 0.0
+    available_feature_mask_pct: float = 70.0
     available_feature_mask_seed: int = 0
 
 

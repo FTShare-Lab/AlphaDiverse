@@ -104,7 +104,7 @@ python -m alphadiverse \
   --output results/hs300_run
 ```
 
-**默认设置：HS300 · Level1 · 1 fold · 20 轮。** 如果特征面板已包含完整的逐日历史成分标记，可省略 `--membership-data`。`bash run.sh` 与 `python -m alphadiverse` 等价；每次运行使用新的输出目录。
+**默认设置：HS300 · Level1 · 1 fold · 20 轮 · feature mask 70%。** 如果特征面板已包含完整的逐日历史成分标记，可省略 `--membership-data`。`bash run.sh` 与 `python -m alphadiverse` 等价；每次运行使用新的输出目录。
 
 <details>
 <summary><strong>市场、时间区间与研究设置</strong></summary>
@@ -115,7 +115,7 @@ python -m alphadiverse \
 | `--base`                          | `level1`                      | `level1`、`alpha20`                        |
 | `--folds`                         | `1`                           | 设为 n 可运行n折研究                          |
 | `--rounds`                        | `20`                          | 研究轮数                                       |
-| `--feature-mask`                  | `0`                           | 屏蔽可选研究特征的百分比，保留基础输入         |
+| `--feature-mask`                  | `70`                           | 屏蔽可选研究特征的百分比，保留基础输入         |
 | `--threads`                       | `4`                           | 本地计算线程数                                 |
 | `--inner-start` / `--inner-end` | `2022-05-01` / `2025-12-31` | inner 研究区间                                |
 | `--outer-start` / `--outer-end` | `2026-01-01` / `2026-08-31` | 最终留出评估区间                               |
